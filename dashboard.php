@@ -8,12 +8,16 @@
         <canvas id="myChart"></canvas>
       </div>
     </div>
-    <div calss="col-md-6"></div>
+    <div calss="col-md-3">
+    </div>
+    <div calss="col-md-3">
+
+    </div>
   </div>
 </div>
 <div class="row m-3">
   <div class="col-md-6">
-    <div class="card p-5 m-1">
+    <div class="card p-3 m-1">
       <h3>Actividad por membresía del mes de: <?php echo date('M') ?> </h3>
       <table class="table">
         <thead class="table-dark">
@@ -31,21 +35,21 @@
             <td>45</td>
             <td>1010101010</td>
             <td>3102225050</td>
-            <td class="bg-success text-white">Cubierto</td>
+            <td class="border border-success">Cubierto</td>
           </tr>
           <tr>
             <th>Peter Mark</th>
             <td>22</td>
             <td>1010101010</td>
             <td>3102225050</td>
-            <td class="bg-warning text-white">Pendiente</td>
+            <td class="bg-warning">Pendiente</td>
           </tr>
           <tr>
             <th>Sus Teran</th>
             <td>29</td>
             <td>1010101010</td>
             <td>3102225050</td>
-            <td class="bg-danger text-white">Vencido</td>
+            <td class="border border-danger">Vencido</td>
           </tr>
         </tbody>
       </table>
@@ -53,12 +57,36 @@
   </div>
   <div class="col-md-3">
     <div class="card p-3 m-1">
-      <h3>Tabla</h3>
+      <h3>Sesiones Individuales Restantes</h3>
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Sesiones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Mark Otto</th>
+            <td class="border border-success">14</td>
+          </tr>
+          <tr>
+            <th>Peter Mark</th>
+            <td class="border border-warning">3</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <div class="col-md-3">
-    <div class="card p-3 m-1">
-      <h3>Tabla </h3>
+    <div class="card p-3 m-1 text-center">
+      <h3>Actualidad</h3>
+      <hr>
+      <h2 class="datos fw-bold">65</h2>
+      <p>Total Members</p>
+      <hr>
+      <h2 class="datos fw-bold">$ 7'800.000</h2>
+      <p>Recaudo Mensual</p>
     </div>
   </div>
 </div>
@@ -73,29 +101,14 @@
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: ['Lun', 'Mar', 'Mir', 'Jue', 'Vie', 'Sáb', 'Dom'],
       datasets: [{
         label: '# Nivel de concurrencia',
         data: [12, 19, 3, 5, 2, 3, 5],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(255, 205, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(201, 203, 207, 0.2)'
-        ],
         borderColor: [
-          'rgb(255, 99, 132)',
-          'rgb(255, 159, 64)',
-          'rgb(255, 205, 86)',
-          'rgb(75, 192, 192)',
-          'rgb(54, 162, 235)',
-          'rgb(153, 102, 255)',
-          'rgb(201, 203, 207)'
+          'rgb(75, 192, 192)'
         ]
       }]
     },
